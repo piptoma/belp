@@ -20,4 +20,5 @@ dat <- tribble(
 )
 
 dat %>%
-  mutate(alter = interval(geburtsdatum, today()) / years(1))
+  mutate(alter = interval(geburtsdatum, today()) / years(1)) %>%
+  arrange(alter)
